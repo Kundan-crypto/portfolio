@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kundan Kumar - BCA Student, Aspiring Data Analyst and Python Developer portfolio." />
+  <meta name="keywords" content="Kundan Kumar, Data Analyst, Python Developer, SQL, Power BI, Excel, Portfolio" />
+  <meta name="author" content="Kundan Kumar" />
+  <title>Kundan Kumar | Data Analyst Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader"><div class="loader-ring"></div><p>Loading Portfolio...</p></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <canvas id="particleCanvas"></canvas>
+
+  <header class="header">
+    <a class="logo" href="#home">Kundan<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <div class="badge">Available for Paid Internship</div>
+        <h1>Hi, I'm <span>Kundan Kumar</span></h1>
+        <h2><span id="typingText"></span><span class="typing-cursor">|</span></h2>
+        <p>BCA student passionate about Data Analytics, Python, SQL, Excel and Power BI. I build dashboards, data projects and practical solutions that solve real-world problems.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/kundan-kumar-7226a235a" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/Kundan-crypto/-medical-theme" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:kundankr811457@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="profile-card tilt-card" id="tiltCard">
+          <div class="profile-avatar">KK</div>
+          <h3>Kundan Kumar</h3>
+          <p>Data Analyst • Python Developer</p>
+          <div class="mini-stats">
+            <div><strong>8+</strong><span>Skills</span></div>
+            <div><strong>6+</strong><span>Projects</span></div>
+            <div><strong>100%</strong><span>Ready</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-title reveal"><p>About Me</p><h2>Recruiter-friendly profile</h2></div>
+      <div class="about-grid">
+        <div class="glass-card reveal">
+          <h3>Who I Am</h3>
+          <p>I am a BCA student from CIMAGE Professional College, Patna. I am focused on building a strong career in Data Analytics and Python development through practical projects and internships.</p>
+        </div>
+        <div class="glass-card reveal">
+          <h3>What I Do</h3>
+          <p>I clean data, write SQL queries, create dashboards, perform analysis and build beginner-friendly machine learning prediction systems using Python.</p>
+        </div>
+        <div class="glass-card reveal">
+          <h3>Goal</h3>
+          <p>Currently looking for a paid internship in Data Analytics, Python Development, Business Intelligence or Data Science.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-title reveal"><p>Skills</p><h2>Technical toolkit</h2></div>
+      <div class="skills-grid">
+        <div class="skill reveal"><span>Python</span><div><i style="width:86%"></i></div></div>
+        <div class="skill reveal"><span>SQL</span><div><i style="width:82%"></i></div></div>
+        <div class="skill reveal"><span>Excel</span><div><i style="width:80%"></i></div></div>
+        <div class="skill reveal"><span>Power BI</span><div><i style="width:74%"></i></div></div>
+        <div class="skill reveal"><span>Pandas / NumPy</span><div><i style="width:72%"></i></div></div>
+        <div class="skill reveal"><span>Machine Learning Basics</span><div><i style="width:65%"></i></div></div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-title reveal"><p>Projects</p><h2>Selected work</h2></div>
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="data">Data</button>
+        <button class="filter" data-filter="python">Python</button>
+        <button class="filter" data-filter="web">Web</button>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal" data-category="data"><span>Data</span><h3>Student Performance Dashboard</h3><p>EDA, charts and prediction system using Python and Streamlit.</p><a href="#">View Case Study →</a></article>
+        <article class="project-card reveal" data-category="data"><span>BI</span><h3>Sales Analysis Dashboard</h3><p>Excel, SQL and Power BI dashboard for business insights.</p><a href="#">View Case Study →</a></article>
+        <article class="project-card reveal" data-category="python"><span>Python</span><h3>Python Automation Projects</h3><p>Mini automation tools for daily productivity and practice.</p><a href="#">View Case Study →</a></article>
+        <article class="project-card reveal" data-category="web"><span>Web</span><h3>Medical Theme Website</h3><p>Responsive web UI project with clean layout and sections.</p><a href="https://github.com/Kundan-crypto/-medical-theme" target="_blank" rel="noreferrer">GitHub →</a></article>
+        <article class="project-card reveal" data-category="data"><span>SQL</span><h3>SQL Practice Database</h3><p>Tables, joins, keys, queries and database fundamentals.</p><a href="#">View Case Study →</a></article>
+        <article class="project-card reveal" data-category="web"><span>Portfolio</span><h3>Premium Portfolio</h3><p>Animated, responsive and internship-ready personal website.</p><a href="#home">Live Preview →</a></article>
+      </div>
+    </section>
+
+    <section class="section timeline" id="timeline">
+      <div class="section-title reveal"><p>Journey</p><h2>Achievements & Experience</h2></div>
+      <div class="timeline-list">
+        <div class="timeline-item reveal"><span>2024 - 2027</span><h3>BCA Student</h3><p>CIMAGE Professional College, Patna.</p></div>
+        <div class="timeline-item reveal"><span>2026</span><h3>Data Analytics Projects</h3><p>Built dashboards, prediction systems and SQL practice projects.</p></div>
+        <div class="timeline-item reveal"><span>Now</span><h3>Looking for Paid Internship</h3><p>Target roles: Data Analyst Intern, Python Intern, BI Intern.</p></div>
+      </div>
+    </section>
+
+    <section class="section certificates" id="certificates">
+      <div class="section-title reveal"><p>Certificates</p><h2>Learning gallery</h2></div>
+      <div class="certificate-grid">
+        <div class="certificate reveal">Python Basics</div>
+        <div class="certificate reveal">SQL Practice</div>
+        <div class="certificate reveal">Excel Dashboard</div>
+        <div class="certificate reveal">Power BI</div>
+      </div>
+    </section>
+
+    <section class="section blog" id="blog">
+      <div class="section-title reveal"><p>Blog</p><h2>Learning notes</h2></div>
+      <div class="blog-grid">
+        <article class="glass-card reveal"><h3>How I Built My First Dashboard</h3><p>A short note about data cleaning, charts and insights.</p></article>
+        <article class="glass-card reveal"><h3>SQL Joins Made Simple</h3><p>Inner, left, right and full joins with simple examples.</p></article>
+        <article class="glass-card reveal"><h3>Python for Data Analysis</h3><p>How Pandas helps convert raw data into useful insights.</p></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-title reveal"><p>Contact</p><h2>Let's work together</h2></div>
+      <div class="contact-grid">
+        <div class="glass-card reveal">
+          <h3>Contact Details</h3>
+          <p>Email: <a href="mailto:kundankr811457@gmail.com">kundankr811457@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/kundan-kumar-7226a235a" target="_blank" rel="noreferrer">kundan-kumar</a></p>
+          <p>GitHub: <a href="https://github.com/Kundan-crypto/-medical-theme" target="_blank" rel="noreferrer">Kundan-crypto</a></p>
+        </div>
+        <form class="contact-form reveal" action="mailto:kundankr811457@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button class="chat-btn" id="chatBtn">🤖</button>
+  <div class="chat-box" id="chatBox">
+    <div class="chat-head">AI Portfolio Assistant <button id="closeChat">×</button></div>
+    <div class="chat-body" id="chatBody">
+      <p><strong>Bot:</strong> Hi! Ask me about Kundan's skills, projects or internship availability.</p>
+    </div>
+    <div class="chat-input"><input id="chatInput" placeholder="Type your question..." /><button id="sendChat">Send</button></div>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Kundan Kumar. Built for internship opportunities.</p>
+    <p class="visitor">Visitor Count: <span id="visitorCount">1</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
